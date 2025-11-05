@@ -1,0 +1,305 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Parent
+ * @author Postali LLC
+ */
+
+footer {
+
+	#footer-main {
+		background-color:$grey;
+		width:100%;
+
+		#footer-columns-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			padding-top:60px;
+			padding-bottom:60px;
+			@media screen and (max-width: $screen-md) {
+				grid-template-columns:1fr;
+			}
+			@media screen and (max-width: $screen-sm) {
+				padding-bottom:20px;
+			}
+			.footer-columns {
+				align-self:stretch;
+			}
+
+			#footer-columns-left {
+				padding-right:50px;
+				border-right:1px solid rgba(255,255,255, 0.5);
+				@media screen and (max-width: $screen-md) {
+					padding-right:0;
+					border-right:0;
+				}
+			}
+
+			// Schema
+			#footer-schema {
+				display: grid; 
+				grid-template-columns:1fr 1fr;
+				grid-template-rows: auto;
+				grid-gap: 20px;
+				font-family: sans-serif;
+
+				@media screen and (max-width: $screen-lg) {
+					grid-template-columns:1fr;
+					grid-row-gap:30px;
+				}
+				
+				
+				#footer-schema-1 {
+					grid-column-start: 1;
+					grid-column-end:3; // Allows this div to span 2 grids
+				}
+				
+				#footer-schema-2 {
+					display: grid;
+					grid-template-columns:40px 1fr;
+					
+					@media screen and (max-width: $screen-lg) {
+						grid-column-start: 1;
+						grid-column-end:3;
+					}
+					@media screen and (max-width: $screen-md) {
+						grid-column-start: 1;
+						grid-column-end:2;
+					}
+					@media screen and (max-width: $screen-sm) {
+						grid-column-start: 1;
+						grid-column-end:3;
+					}
+					
+
+					div {
+						margin-left:15px;
+						align-self:start;
+					}
+					a {
+						display: block;
+						margin-top:20px;
+					}
+					&:before {
+						font-family: 'icomoon';
+						content: "\e905";
+						display: inline-block;
+						width:40px;
+						color:$white;
+						font-size:40px;
+						align-self:start;
+					}
+				}
+				
+				#footer-schema-3 {
+					display: grid;
+					grid-template-columns:1fr;
+					@media screen and (max-width: $screen-lg) {
+						
+					}
+					@media screen and (max-width: $screen-md) {
+						grid-template-columns:1fr;
+					}
+				}
+
+				#footer-schema-4 {
+					grid-column-start:1;
+					grid-column-end:3; // Allows this div to span 2 grids
+					@media screen and (max-width: $screen-md) {
+						padding-top:0;
+						padding-bottom:40px;
+					}
+					span {
+						display: block;
+					}
+				}
+
+				p, span {
+					color:$white;
+				}
+				
+				a {
+					color:$black;
+					transition:0.3s linear;
+					text-decoration: none;
+				}
+			}
+			#footer-schema-logo {
+				display: block;
+				padding-bottom: 30px;
+
+					img {
+						max-width: 250px;
+					}
+			}
+
+			#footer-schema-name {
+				font-size:18px;
+				line-height: 150%;
+				font-weight: 600;
+				font-family: sans-serif;
+			}	
+
+			#footer-schema-telephone {
+				vertical-align: top;
+				display: inline-block;
+				margin-bottom: 30px;
+				
+				&:before {
+					font-family: 'icomoon';
+					content: "\e906";
+					display: inline-block;
+					width:40px;
+					color:$white;
+					font-size:40px;
+					vertical-align: top;
+					margin-right:15px;
+				}
+			}
+
+			#footer-schema-email {
+				vertical-align: top;
+				display: inline-block;
+				
+				&:before {
+					font-family: 'icomoon';
+					content: "\e904";
+					display: inline-block;
+					width:40px;
+					color:$white;
+					font-size:40px;
+					vertical-align: top;
+					margin-right:15px;
+				}
+			}
+
+			#footer-schema-address-container {
+
+				#footer-schema-address {
+
+				}
+
+				#footer-schema-city {
+
+				}
+
+				#footer-schema-state {
+
+				}
+
+				#footer-schema-zip {
+
+				}
+			}
+
+			#footer-schema-description {
+
+			}
+
+			#footer-columns-right {
+				padding-left:50px;
+				@media screen and (max-width: $screen-md) {
+					padding-left:0;
+				}
+				form {
+					
+					p {
+						display: grid;
+						grid-template-columns:1fr 1fr;
+						grid-template-rows: auto;
+						grid-gap: 10px;
+						br {
+							display: none !important;
+						}
+					}
+					span.your-name, span.your-message {
+						grid-column-start:1;
+						grid-column-end:3; // Allows this div to span 2 grids
+						justify-content: stretch;
+						align-content:stretch;
+					}
+					span.your-email, span.your-phone {
+						justify-content:stretch;
+						align-content: stretch;	
+						width:100%;
+					}
+				}
+
+				input[type="text"], input[type="email"], input[type="tel"], textarea {
+					border:0;
+					padding:10px 15px;
+					font-family: sans-serif;
+					font-size:16px;
+					line-height: 150%;
+					color:$black;
+					width:100%;
+					@media screen and (max-width: $screen-sm) {
+						font-size:14px;
+					}
+				}
+
+				textarea {
+					max-height: 180px;
+				}
+
+				input[type="submit"] {
+					background-color:$black;
+					color:$white;
+					border:none;
+					transition:$transition-speed linear;
+					padding:10px 50px;
+					font-family: sans-serif;
+					font-size: 24px;
+					line-height: 32px;
+					text-transform: uppercase;
+					cursor: pointer;
+
+					@media screen and (max-width: $screen-lg) {
+						grid-column-start:1;
+						grid-column-end:3;
+					}
+					&:hover {
+						background-color:darken($black,20%);;
+					}
+				}
+			}	
+		}
+	}
+
+	#footer-bottom {
+		width:100%;
+		padding:15px 0;
+		#footer-bottom-top {
+			ul {
+				list-style-type:none;
+				margin:0;
+				padding:0 0 30px 0;
+				li {
+					display: inline-block;
+					margin-right: 15px;
+					a {
+						display: block;
+						color:$white;
+						font-family: sans-serif;
+						font-size:14px;
+						line-height: 150%;
+						text-decoration: none;
+						transition:0.3s linear;
+						&:hover {
+							color:$black;
+						}
+					}
+				}
+			}
+		}
+		#footer-bottom-bottom {
+			text-align: center;
+			p {
+				color: $white;
+				font-family: sans-serif;
+				font-size:14px;
+				line-height: 150%;
+			}
+		}
+	}
+}

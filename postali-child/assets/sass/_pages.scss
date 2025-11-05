@@ -1,0 +1,782 @@
+/**
+ * Page Template Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+*/
+
+// About Template
+.page-template-page-about {
+    .hero {
+        @include hero-with-bg(contain);
+    }
+    #panel-2 {
+        .container {
+            #mac-hester {
+                scroll-margin-top: 175px;   
+            }
+            div:first-of-type {
+                & > div:nth-of-type(2) {
+                    img {
+                        @media screen and (max-width: $screen-sm) {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+            div:nth-of-type(3) {
+                .spacer-30 {
+                    border-top: solid 1px $dk-blue;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+// Client Reviews Template
+.page-template-page-client-reviews {
+    .hero {
+        @include hero-with-bg(cover);
+    }
+    #panel-1 {
+        .review-el {
+            &_inner {
+                background: $transparent-white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 25px 0;
+                padding: 50px 25px 25px 50px;
+                @media screen and (max-width: $screen-xs) {
+                    padding: 50px 25px;
+                }
+                .wrapper {
+                    max-width: 1000px;
+                    overflow-wrap: anywhere;
+                }
+                p {
+                    font-family: $open-sans;
+                }
+                p:first-of-type {
+                    font-family: $outfit;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .star-rating {
+                    color: $yellow;
+                    margin-right: 15px;
+                    font-size: 18px;
+                }
+            }
+            img {
+                margin: 25px 0 50px;
+            }
+        }
+    }
+}
+
+// Practice Area Parent Template
+.page-template-page-pa-parent {
+    .hero {
+        @include hero-with-bg(cover);
+        .banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @media screen and (max-width: $screen-sm ) {
+                top: 100px;
+            }
+            @media screen and (max-width: $screen-xs ) {
+                top: 145px;
+            }
+        }
+        .cta-container {
+            margin-top: 50px;
+            @media screen and (max-width: $screen-sm) {
+                margin-top: 0;
+            }
+        }
+        .related-cat-nav {
+            align-items: center;
+            @media screen and (max-width: $screen-sm) {
+                margin-top: 50px;
+            }
+            a.sub-title {
+                text-decoration: underline;
+                font-size: 16px;
+                font-weight: $semi-bold;
+                position: relative;
+                &:after {
+                    content: url(/wp-content/uploads/2022/06/on-page-dropdown-arrow.svg);
+                    width: 8px;
+                    height: 5px;
+                    position: absolute;
+                    right: -14px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+    #panel-4, #panel-8 {
+        .sub-title {
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 1.6px;
+            border-bottom: solid 1px $dk-blue;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+    }
+    #panel-8 {
+        ul {
+            @include common-links-list();
+        }
+    }
+
+    &.page-id-607 {
+        .hero {
+            .cta-container {
+                display: none;
+            }
+        }
+    }
+}
+
+// Practice Area Interior Template
+.page-template-page-pa-interior {
+    h2 {
+        margin-top: 80px;
+    }
+    .hero {
+        padding-bottom: 20px;
+        & > div:nth-of-type(2) {
+            .columns {
+                align-items: flex-end;
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 35px;
+            }
+        }
+        .related-cat-nav {
+            align-items: center;
+            @media screen and (max-width: $screen-sm) {
+                margin-top: 50px;
+            }
+            a.sub-title {
+                text-decoration: underline;
+                font-size: 16px;
+                font-weight: $semi-bold;
+                position: relative;
+                &:after {
+                    content: url(/wp-content/uploads/2022/06/on-page-dropdown-arrow.svg);
+                    width: 8px;
+                    height: 5px;
+                    position: absolute;
+                    right: -14px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+    #panel-2 {
+        .sub-title {
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 1.6px;
+            border-bottom: solid 1px $dk-blue;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        ul {
+            @include common-links-list();
+        }
+    }
+}
+
+// Blog Posts Page Template
+.blog, .category {
+    background: $dk-blue;
+    .hero {
+        @include hero-with-bg(cover);
+        &#hero-has-bg {
+            &:after {
+                background: transparent linear-gradient(0deg, $dk-blue 20%, #DBE3E400 100%) 0% 0% no-repeat padding-box;
+                @media screen and (max-width: $screen-sm) {
+                    height: 77%;
+                }
+            }
+        }
+        #breadcrumbs {
+            a, span {
+                color: $white;
+            }
+        }
+        h1 {
+            color: $white;
+        }
+    }
+    .blog-posts {
+        @include related-post-cards-grid();
+        #pagination {
+            margin: 50px auto;
+            width: 1380px;
+            position: relative;
+            left: 10px;
+            @media screen and (max-width: $screen-xl) {
+                width: 1035px;
+            }
+            @media screen and (min-width: 993px) and (max-width: $screen-lg) {
+                width: 840px;
+            }
+            @media screen and (max-width: $screen-md) {
+                width: 690px;
+            }
+            @media screen and (max-width: $screen-sm) {
+                width: 400px;
+                left: 0;
+            }
+            @media screen and (max-width: $screen-xxs) {
+                width: 310px;
+            }
+            .page-numbers {
+                color: $lt-blue;
+                &.current{
+                    color: $yellow;
+                }
+                &.prev, &.next {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Single Post Template
+.single-post {
+    .hero {
+        h1 {
+            margin-top: 30px;
+        }
+        padding-bottom: 20px;
+        & > div:nth-of-type(2) {
+            .columns {
+                align-items: flex-end;
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 35px;
+            }
+        }
+        .related-cat-nav {
+            align-items: center;
+            @media screen and (max-width: $screen-sm) {
+                margin-top: 50px;
+            }
+            a.sub-title {
+                text-decoration: underline;
+                font-size: 16px;
+                font-weight: $semi-bold;
+                position: relative;
+                &:after {
+                    content: url(/wp-content/uploads/2022/06/on-page-dropdown-arrow.svg);
+                    width: 8px;
+                    height: 5px;
+                    position: absolute;
+                    right: -14px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+    #panel-1 {
+        @media screen and (max-width: $screen-sm) {
+            padding-top: 40px;
+        }
+        .author {
+            & > div:first-of-type {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                .column-25 {
+                    width: auto;
+                    justify-content: flex-end;
+                }
+                .column-75 {
+                    width: auto !important;
+                    div {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+            p, a {
+                font-family: $outfit;
+                font-size: 16px;
+                margin: 0;
+                strong {
+                    font-size: 14px;
+                }
+            }
+            span {
+                p:first-of-type {
+                    margin: 0;
+                }
+            }
+            &_img {
+                width: 44px;
+                height: 44px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            @media screen and (max-width: $screen-sm) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    #panel-2 {
+        .sub-title {
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 1.6px;
+            border-bottom: solid 1px $dk-blue;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .recent-posts {
+            @include related-post-cards-grid();
+        }
+    }
+}
+
+// Areas Served Template
+.page-template-page-areas-served {
+    .hero {
+        @include hero-with-bg(cover);
+        .column-66 {
+            .columns {
+                margin-top: 50px;
+            }
+        }
+    }
+    #panel-1 {
+        .column-full.title {
+            .sub-title {
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 15px;
+                letter-spacing: 1.6px;
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 20px;
+                margin-bottom: 50px;
+            }
+        }
+        .column-full.locations {
+            @include locations-list();
+        }
+    }
+    #panel-2 {
+        & > .container {
+            .columns {
+                .dog-ear-container {
+                    @media screen and (max-width: $screen-sm) {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Contact Template
+.page-template-page-contact {
+    .hero {
+        @include hero-with-bg(cover);
+        .container {
+            .column-50 {
+                .columns {
+                    margin-top: 50px;
+                    a.btn{
+                        @media screen and (min-width: 769px) and (max-width: $screen-md) {
+                            min-width: 150px;
+                        }
+                    }
+                }
+            }
+            .column-50.right {
+                justify-content: flex-end;
+                @media screen and (max-width: $screen-sm) {
+                    position: relative;
+                    display: block;
+                    width: 100vw;
+                    left: -30px;
+                }
+                .dog-ear-container {
+                    max-width: 100%;
+                    width: 100%;
+                    padding: 10% 0;
+                    @media screen and (max-width: $screen-sm) {
+                        margin-top: 50px;
+                        width: inherit;
+                        max-width: 100%;
+                        position: relative;
+                    }
+                    .gform_wrapper {
+                        width: 75%;
+                        margin: 0 auto;
+                    }
+                }
+            } 
+        } 
+    }
+    #panel-1 {
+        .column-full.title {
+            .sub-title {
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 15px;
+                letter-spacing: 1.6px;
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 20px;
+                margin-bottom: 50px;
+            }
+        }
+        .column-full.locations {
+            @include locations-list();
+        }
+    }
+}
+
+// Practice Areas Template
+.page-template-page-practice-areas {
+    .hero {
+        @include hero-with-bg(cover);
+        .container:not(.wide) {
+            & > div:nth-of-type(2) { 
+                margin-top: 50px;                
+            }
+        }
+    }   
+    #panel-1 {
+        .thin-text {
+            color: $dk-blue;
+        } 
+        .category-btn-container {
+            justify-content: center;
+            margin: 10px 0 90px 0;
+            @media screen and (max-width: $screen-xs) {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                max-width: 100%;
+                width: 50%;
+                background-color: $lt-blue;
+                color: $dk-blue;
+                text-transform: capitalize;
+                border-bottom: solid 1px $alt-blue;
+                padding: 0;
+                font-size: 25px;
+                letter-spacing: -0.85px;
+                position: relative;
+                @media screen and (max-width: $screen-xs) {
+                    width: 100%;
+                }
+                &:hover {
+                    text-decoration: none;
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+                &:after {
+                    content: "+";
+                    display: inline-block;
+                    transition: 0.3s linear;
+                    font-size: 16px;
+                    position: relative;
+                    color: $dk-blue;
+                    font-size: 30px;
+                    right: -25%;
+                    font-weight: $light;
+                    @media screen and (max-width: $screen-md) {
+                        right: -15%;
+                    }
+                    @media screen and (max-width: $screen-xs) {
+                        right: -10%;
+                    }
+                }
+                &.active {
+                    background-color: $alt-blue;
+                    border-bottom: solid 3px $yellow;
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+        .practice-areas {
+            .pa-sub-container {
+                display: none;
+                &.active {
+                    display: block;
+                }
+                .group-element {
+                    margin-bottom: 110px;
+                }
+                .columns {
+                    border-bottom: solid 1px $dk-blue;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    align-items: center;
+                    @media screen and (max-width: $screen-md) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    &.sub-page-group {
+                        border-top: solid 1px $dk-blue;
+                        border-bottom: 0;
+                        padding: 20px 0 0;
+                        margin: 20px 0 0;
+                        span, p {
+                            margin: 0 5px;
+                            @media screen and (max-width: $screen-xs) {
+                                margin: 5px 0;
+                            }
+                        }
+                        @media screen and (min-width: 668px) and (max-width: $screen-md) {
+                            flex-direction: row;
+                            align-items: center;
+                        }
+                    }
+                    h2 {
+                        font-size: 34px;
+                        margin: 0;
+                        @media screen and (max-width: $screen-md) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .fancy-link {
+                        text-transform: uppercase;
+                        text-decoration: underline;
+                        letter-spacing: 1.6px;
+                        font-family: $outfit;
+                        font-size: 14px;
+                        font-weight: $bold;
+                        position: relative;
+                        left: -20px;
+                        display: flex;
+                        align-items: center;
+                        @media screen and (max-width: $screen-md) {
+                            left: 0;
+                        }
+                        &:after {
+                            content: "";
+                            background: url('/wp-content/uploads/2022/06/secondary-nav-arrow-icon-yellow.svg') no-repeat;
+                            background-size: 50%;
+                            background-position: center;
+                            height: 30px;
+                            width: 30px;
+                            position: absolute;
+                            right: -30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Search Results Template
+.search-results {
+    h1 {
+        margin-top: 80px;
+        @media screen and (max-width: $screen-sm) {
+            margin-top: 40px;
+        }
+    }
+    .hero {
+        padding-bottom: 20px;
+        & > div:nth-of-type(2) {
+            .columns.border {
+                align-items: flex-end;
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 35px;
+            }
+            .columns:not(.border) {
+                padding-top: 35px;
+            }
+        }
+    }
+    #panel-1 {
+        padding-top: 40px;
+        .search-result {
+            border-bottom: solid 1px $dk-blue;
+            width: 100%;
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            .sub-title {
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-size: 16px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 135px;
+                padding: 20px 0 30px 0;
+                letter-spacing: 1.6px;
+                &:after {
+                    content: "";
+                    background: url('/wp-content/uploads/2022/06/secondary-nav-arrow-icon-dk-blue.svg') no-repeat;
+                    background-size: 50%;
+                    background-position: center;
+                    height: 30px;
+                    width: 30px;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+        #pagination {
+            margin-top: 50px;
+        }
+    }
+}
+
+// Sitemap Template
+.page-template-sitemap {
+    .hero {
+        h1 {
+            margin-top: 80px;
+            @media screen and (max-width: $screen-sm) {
+                margin-top: 40px;
+            }
+        }
+        padding-bottom: 20px;
+        & > div:nth-of-type(2) {
+            .columns {
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 35px;
+            }
+        }
+    }
+    #panel-1 {
+        padding-top: 40px;
+        ul {
+            & > li a {
+                font-weight: $bold;
+                text-decoration: underline;
+                font-family: $open-sans;
+                font-size: 16px;
+            }
+            ul.children {
+                margin-left: 25px;
+                & > li a {
+                    font-weight: $regular;
+                }
+            }
+        }
+    }
+}
+
+// Default Template
+.page-template-default {
+    .hero {
+        h1 {
+            margin-top: 80px;
+            @media screen and (max-width: $screen-sm) {
+                margin-top: 40px;
+            }
+        }
+        padding-bottom: 20px;
+        & > div:nth-of-type(2) {
+            .columns {
+                border-bottom: solid 1px $dk-blue;
+                padding-bottom: 35px;
+            }
+        }
+    }
+    #panel-1 {
+        padding-top: 40px;
+    }
+}
+
+// 404 Template
+.error404 {
+    #panel-1 {
+        .column-full {
+            justify-content: center;
+            align-items: center;
+            .btn {
+                margin: 50px auto;
+            }
+        }
+    }
+}
+
+// Single Testimonial
+.single-testimonials {
+    #panel-1 > .container {
+        background: $transparent-white;
+        padding: 50px !important;
+        @media screen and (max-width: $screen-sm) {
+            padding: 50px 25px !important;
+        }
+        .review-el {
+            &_inner {
+                p:first-of-type {
+                    font-family: $outfit;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 25px;
+                }
+                .star-rating {
+                    color: $yellow;
+                    margin-right: 15px;
+                    font-size: 18px;
+                }
+            }
+            img {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.single-attorneys {
+    .hero {
+        background-image: url('/wp-content/uploads/2022/06/contact-header-img.jpg');
+        @include hero-with-bg(cover);
+    }
+}
+
+// Denver Landing Page hero fix
+.page-id-613 {
+    #home-hero {
+        @media screen and (max-width: $screen-sm) {
+            padding-top: 315px !important;
+        }
+        @media screen and (max-width: 700px) {
+            padding-top: 355px !important;
+        }
+        @media screen and (max-width: $screen-xs) {
+            padding-top: 320px !important;
+        }
+        @media screen and (max-width: 500px) {
+            padding-top: 300px !important;
+        }
+        @media screen and (max-width: 433px) {
+            padding-top: 320px !important;
+        }
+        @media screen and (max-width: 380px) {
+            padding-top: 340px !important;
+        }
+        @media screen and (max-width: 365px) {
+            padding-top: 374px !important;
+        }
+    }
+}

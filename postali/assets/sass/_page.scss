@@ -1,0 +1,48 @@
+#front-page {
+    color:red;
+}
+
+.content {
+    display: grid;
+    grid-template-columns:1fr 320px;
+    grid-column-gap: 50px;
+    padding-bottom:50px;
+    @media screen and (max-width: $screen-md) {
+       display: block;
+    }
+}
+
+.main-content {
+    align-self: start;
+    justify-self:stretch;
+}
+
+.main-sidebar {
+    align-self: start;
+    justify-self:stretch;
+    border-left:1px solid $grey;
+    padding-left:30px;
+    @media screen and (max-width: $screen-md) {
+        border-left:0;
+        padding-left:0;
+    }
+}
+
+// Search Results Page Template
+#search-results {
+    padding:80px 0;
+}
+
+// Case Results
+#results-feed, #testimonial-feed {
+    .result-content, .testimonial-content {
+        margin:20px 0 40px 0;
+    }
+    .single-result-container, .single-testimonial-container {
+        border-bottom:2px solid $white;
+        margin-bottom:40px;
+        &:last-child {
+            border-bottom:none;
+        }
+    }
+}

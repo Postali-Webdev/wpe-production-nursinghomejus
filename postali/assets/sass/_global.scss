@@ -1,0 +1,363 @@
+/**
+ * Global Styles (Header, Footer, Buttons
+ *
+ * @package Postali Parent
+ * @author Postali LLC
+*/
+
+
+.btn {
+    background-color:$black;
+    color:$white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:24px;
+    line-height: 120%;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding:10px 20px;
+    transition:$transition-speed linear;
+    @media screen and (max-width: $screen-sm) {
+        font-size:20px;
+    }
+    &:hover {
+        color:$white;
+        text-decoration: none;
+        background-color:darken($black,20%);
+    }
+}
+
+.sub-title-text {
+    font-family: sans-serif;
+    font-size:48px;
+    line-height: 120%;
+    margin-bottom:15px;
+    @media screen and (max-width: $screen-md) {
+        font-size:36px;
+    }
+    @media screen and (max-width: $screen-sm) {
+        font-size:24px;
+    }
+    &:after {
+        content:('');
+        display: block;
+        height:3px;
+        width:150px;
+        margin-top:30px;
+        margin-bottom:30px;
+        background-color:$grey;
+    }
+}
+
+/* Images */
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.alignleft, .alignright, .aligncenter, .alignnone {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Utility classes */
+.screen-reader-text {
+    position: absolute;
+    left: -99999em;
+}
+
+.clearfix {
+    zoom: 1; 
+    &:before, &:after {
+        content: '';
+        display: table;
+    }
+    
+}
+
+.clear, .clearfix:after {
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Structure */
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+
+}
+
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    margin:0 auto;
+}
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#breadcrumbs {
+    padding:30px 0;
+    font-weight: 600;
+    a {
+        color:$black;
+    }
+}
+
+// Pagination
+.pagination {
+    padding-top:20px;
+    a, span {
+        margin:0 5px;
+    }
+}
+
+
+
+// Banner
+.banner {
+    background-size: cover;
+    background-position: center center;
+}
+
+// Frontpage Banner
+#fp-banner .banner {
+    padding-top:150px;
+    padding-bottom: 120px;
+    background-position: center center !important;
+    @media screen and (max-width: $screen-md) {
+        padding-top:100px;
+        padding-bottom:80px;
+    }
+    @media screen and (max-width: $screen-sm) {
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+}
+
+#page-banner .banner {
+    padding-top:120px;
+    padding-bottom:120px;
+    background-position: top center !important;
+}
+
+#banner-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    h1 {
+        color:$white;
+        margin-bottom:0;
+    }
+
+    .banner-large-text {
+        color:$black;
+        font-size:64px;
+        line-height: 110%;
+        font-family: sans-serif;  
+        text-transform: uppercase;
+        @media screen and (max-width: $screen-lg) {
+            font-size:52px;
+        }
+        @media screen and (max-width: $screen-md) {
+            font-size:42px;
+        }
+        @media screen and (max-width: $screen-sm) {
+            font-size:24px;
+        }
+    }   
+
+    .cta-text {
+        margin-top:50px;
+        color:$white;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 110%;
+        @media screen and (max-width: $screen-sm) {
+            font-size:20px;
+        }
+    }
+
+    .banner-cta-block {
+        display: block;
+        margin-top:15px;
+        padding:10px 15px; 
+        background-color:$black;
+        color:$white;
+        background-image:url('../img/phone.png');
+        background-size:50px 50px;
+        background-repeat: no-repeat;
+        background-position: left 15px center;
+        justify-self: start;
+        @media screen and (max-width: $screen-sm) {
+            background-size:30px 30px;
+        }
+        span {
+            color:$white;
+            margin-left: 65px;
+            font-family: sans-serif;
+            font-size:48px;
+            z-index: 1;
+            line-height: 130%;
+            font-weight: 200;
+            @media screen and (max-width: $screen-sm) {
+                z-index: 1;
+            }
+            @media screen and (max-width: $screen-sm) {
+                font-size:36px;
+            }
+            @media screen and (max-width: $screen-xs) {
+                font-size:24px;
+                margin-left:45px;
+            }
+        }
+    }
+}
+
+
+#fp-top {
+    padding:50px 0;
+    background-color:$white;
+    
+    #fp-top-container {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-column-gap:50px;
+        padding-bottom: 30px;
+        @media screen and (max-width: $screen-md) {
+            display: block;
+            padding-bottom: 0;
+        }
+    }
+
+    .sub-title-text {
+        grid-column-start:1;
+        grid-column-end:3;
+        justify-self: stretch;
+        margin-bottom:0;
+        
+    }
+}
+
+#fp-cta-banner {
+    background-color:$black;
+    border-bottom:10px solid $black;
+    
+    #fp-cta-banner-container {
+        padding-top:40px;
+        padding-bottom: 40px;
+        display: grid;
+        grid-template-columns:100px 3fr 1fr;
+        @media screen and (max-width: $screen-md) {
+            grid-template-columns:100px 1fr;
+        }
+        
+
+        div {
+            height: 100px;
+            display: block;
+            background-image:url('../img/phone.png');
+            background-size:80px 80px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            @media screen and (max-width: $screen-md) {
+               background-size:60px 60px;
+               height: 80px;
+            }
+            @media screen and (max-width: $screen-sm) {
+                background-size:40px 40px;
+                height: 60px;
+            }
+        }
+
+        span {
+            margin-left:30px;
+            color:$white;
+            font-family: sans-serif;
+            font-size:40px;
+            line-height: 120%;
+            justify-self: start;
+            @media screen and (max-width: $screen-md) {
+                font-size:32px;
+                margin-left:0px;
+                br {
+                    display: none;
+                }
+            }
+            @media screen and (max-width: $screen-sm) {
+                font-size:24px;
+            }
+        }
+
+        a.btn {
+            justify-self: end;
+            align-self:center;
+            @media screen and (max-width: $screen-md) {
+                grid-column-start:1;
+                grid-column-end:3;
+                justify-self:center;
+                margin-top:30px;
+            }
+        }
+    }
+}
+
+
+// Contact Block (block-contact.php)
+.contact-block {
+    background-color:$white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    .contact-block-left {
+        align-self:stretch;
+        justify-self: stretch;
+        padding:60px 100px;
+
+        h2 {
+            margin-bottom:30px;
+
+            &:after {
+                content: "";
+                display: block;
+                height: 3px;
+                width: 150px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background-color: $black;
+            }
+        }
+    }
+
+    .contact-block-right {
+        align-self:stretch;
+        justify-self: stretch;
+        background-size:cover;
+        background-position: center center !important;
+        background-repeat: no-repeat;
+    }
+}

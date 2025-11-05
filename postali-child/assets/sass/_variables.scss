@@ -1,0 +1,163 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+// Breakpoints
+$screen-xxxl: 1920px;
+$screen-xxl: 1640px;
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-ipad: 1024px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 667px;
+$screen-xxs: 480px;
+$screen-xxxs: 360px;
+
+// Containers
+$container-max-width: $screen-xxl;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease-in-ease-out;
+$transition-slow:.5s ease-in-ease-out;
+
+// Core Colors
+$blk: #000000;
+$alt-blk: #121722;
+$grey: #666666;
+$white: #FFFFFF;
+$transparent-white: #ffffff87;
+$dk-blue: #0A1E1F;
+$blue: #718F94;
+$lt-blue: #DBE3E4;
+$alt-blue: #b7c7c9;
+$alt-blue-2: #AFD0D6;
+$yellow: #FCCA46;
+$maroon:  #702632;
+$transparent: #ffffff00;
+
+// Link Attributes
+$link-transition-speed: .15s;
+$trans: 0.3s linear;
+
+// Font Styles
+//Open Sans
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/opensans-regular.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/opensans-medium.woff2') format('woff2');
+    font-weight: 500; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/opensans-bold.woff2') format('woff2');
+    font-weight: 600; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/opensans-italic.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: italic;
+    display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/opensans-bold-italic.woff2') format('woff2');
+    font-weight: 600; 
+    font-style: italic;
+    display: swap;
+}
+//Lato
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/lato-regular.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/lato-black.woff2') format('woff2');
+    font-weight: 900; 
+    font-style: normal;
+    display: swap;
+}
+//Libre Baskerville
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/libre-baskerville/libre-baskerville-regular.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/libre-baskerville/libre-baskerville-italic.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: italic;
+    display: swap;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/libre-baskerville/libre-baskerville-bold.woff2') format('woff2');
+    font-weight: 600; 
+    font-style: normal;
+    display: swap;
+}
+//Outfit
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/outfit-regular.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/outfit-semi-bold.woff2') format('woff2');
+    font-weight: 500; 
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/outfit-bold.woff2') format('woff2');
+    font-weight: 600; 
+    font-style: normal;
+    display: swap;
+}
+
+
+
+// Typography
+$sans: 'Helvetica', sans-serif;
+$serif: 'Times New Roman', serif;
+$icomoon: 'Icomoon';
+$outfit: 'Outfit', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$lato: 'Lato', sans-serif;
+$libre-baskerville: 'Libre Baskerville', serif;
+
+$body-line-height: 130%;
+
+// Font Weight
+$light: 100;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700; 
+$black: 900;

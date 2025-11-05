@@ -1,0 +1,48 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package Postali Parent
+ * @author Postali LLC
+ */
+
+@import 'functions';
+
+// Global
+$rem-base: 16px !default;
+
+// Breakpoints
+// $screen-xl: 2024px;
+$screen-lg: 1400px;
+$screen-md: 992px;
+$screen-sm: 767px;
+$screen-xs: 540px;
+
+// Containers
+$container-max-width: $screen-lg;
+$container-padding:30px;
+
+// Helpers
+$centered: 0 auto;
+$header-height:130px;
+
+// Transitions
+$transition-speed:.3s;
+
+// Core Colors
+$black: #000000;
+$white: #FFFFFF;
+$grey: #c6c7c8;
+
+// Theme Colors
+$black:$grey;
+
+// Link Attributes
+$link-color: $black;
+$link-hover-color: $black;
+$link-transition-speed: .15s;
+
+
+// Typography
+$body-font-family: sans-serif;
+$body-text-color: sans-serif;
+$body-line-height: 130%;

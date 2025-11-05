@@ -1,0 +1,100 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+#pre-footer {
+    padding-bottom: 0;
+    .dog-ear-container {
+        background: $lt-blue;
+        .gravity-theme .gchoice {
+            background: $white;
+        }
+    }
+    .block-form-cta .columns > div:first-of-type {
+        margin-bottom: 25px;
+        background-size: cover;
+        @media screen and (max-width: $screen-sm) {
+            margin-bottom: 0;
+            background-position: bottom;
+        }
+    }
+    .gform_wrapper {
+        .gform_previous_button {
+            background-color: $lt-blue !important;
+        }
+    }
+}
+footer {
+    background: $white;
+    padding: 75px 0 125px;
+    @media screen and (max-width: $screen-sm) {
+        padding: 75px 0;
+    }
+    p, li, a, a {
+        font-family: $outfit;
+        font-size: 14px;
+    }
+    .container {
+        & > .columns {
+            & > div:first-of-type {
+                @media screen and (max-width: $screen-sm) {
+                    justify-content: center;
+                }
+                img {
+                    @media screen and (max-width: $screen-sm) {
+                        margin-bottom: 75px;
+                    }   
+                }
+            }
+        }
+    }
+    .column-50 {
+        p.sub-title, .direction-link.sub-title {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: $semi-bold;
+            letter-spacing: 1.6px;
+        }
+        .direction-link.sub-title {
+            font-size: 14px;
+        }
+        .columns {
+            border-top: solid 1px $dk-blue;
+            padding-top: 20px;
+        }
+        .locations-container {
+            justify-content: flex-start;
+            .column-33 {
+                margin-right: 20px;
+                @media screen and (max-width: $screen-md) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .column-25 {
+        .copyright-links {
+            margin-top: 25px;
+            p, li, a {
+                margin-bottom: 0;
+            }
+            #menu-footer-menu {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                li {
+                    list-style-type: none;
+                    text-decoration: underline;
+                    margin-top: 0;
+                    &:first-of-type {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

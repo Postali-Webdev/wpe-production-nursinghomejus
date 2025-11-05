@@ -1,0 +1,106 @@
+.blog-feed {
+
+    article {
+        padding-bottom:60px;
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        grid-column-gap: 30px;
+
+        @media screen and (max-width: $screen-sm) {
+           grid-template-columns:1fr;
+           grid-column-gap:0;
+           grid-row-gap: 30px;
+        }
+
+        .blog-feed-article-image {
+            display: block;
+            align-self: stretch;
+            justify-content: stretch;
+            background-position: center center !important;
+
+            @media screen and (max-width: $screen-sm) {
+                height: 230px;
+             }
+        }
+
+        .blog-feed-article-content {
+            align-content: start;
+
+            a {
+                text-decoration: none;
+            }
+
+            h2 {
+                font-family:sans-serif;
+                text-transform: uppercase;
+                font-weight: 400;
+                border-bottom:1px solid $grey;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                line-height: 90%;
+            }
+
+            .btn {
+                align-self:end;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+#single-post {
+    
+    h1 {
+        font-family: sans-serif;
+        font-size:32px;
+        line-height: 140%;
+        color:$black;
+        text-transform: none;
+        margin-bottom:10px;
+    }
+    
+    .post-meta {
+        line-height: 120%;
+        &:after {
+            content:('');
+            display: block;
+            height:3px;
+            width:150px;
+            margin-top:30px;
+            margin-bottom:30px;
+            background-color:$grey;
+        }
+
+        a {
+            color:$black;
+            text-decoration:none;
+            font-style:italic;
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+    }
+
+    .article-featured-image {
+        height:auto;
+        width:100%;
+        padding-bottom:50px;
+        padding-top:20px;
+    }
+    h2 {
+        font-size:24px;
+        line-height: 140%;
+        color:$black;
+        &:after {
+            content:none;
+        }
+    }
+    h3 {
+        font-size:20px;
+        line-height: 140%;
+        &:after {
+            content:none;
+        }
+    }
+}
+

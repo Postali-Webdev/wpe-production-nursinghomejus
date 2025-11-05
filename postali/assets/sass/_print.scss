@@ -1,0 +1,11 @@
+/**
+ * Print styles.
+ *
+ * @package Postali Parent
+ * @author Postali LLC
+ */
+
+/** Elements to be hidden when a screen is printed */
+#primary-nav, #footer-nav {
+	display: none !important;
+}

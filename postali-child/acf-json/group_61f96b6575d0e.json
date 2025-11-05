@@ -1,0 +1,58 @@
+{
+    "key": "group_61f96b6575d0e",
+    "title": "Postali Child theme instructions",
+    "fields": [
+        {
+            "key": "field_61f96b7027641",
+            "label": "Using Advanced Custom Fields:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "- Each unique \"panel\" section should be it's own tab (field type > tab) and should be left aligned\r\n- Above the fold section should be labeled \"Page Header\"\r\n- Below the fold sections should be labeled as \"Panel-name\" (ex. Panel-Case Results)\r\n- Panel that lives just above the footer (if needed) should be labeled as \"Pre-Footer\"\r\n- All unnecessary sections should be hidden (ex. content editor, excerpt, etc)\r\n- Use message fields to explain content sections that aren't directly editable in the content editor but still exist on the front end (results, testimonials, etc)",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61f9788676925",
+            "label": "Global Elements:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "All ACF global elements should be created in the 'Customizations' tab. These can include:\r\n- google map embed code\r\n- global address\r\n- global email address\r\n- global phone\r\n\r\nFor call tracking purposes, the global phone number can be utilized as a shortcode by pasting the following function into the functions.php file:\r\n\r\nfunction addGlobalNumber() {\r\n        return get_field('phone_number','options');\r\n    }\r\nadd_shortcode('globalnumber', 'addGlobalNumber');\r\n\r\nThis is referenced by using the following shortcode: [globalnumber]",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-instructions"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1643740583
+}

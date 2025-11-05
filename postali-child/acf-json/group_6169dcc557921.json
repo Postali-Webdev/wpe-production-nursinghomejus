@@ -1,0 +1,50 @@
+{
+    "key": "group_6169dcc557921",
+    "title": "Custom Schema",
+    "fields": [
+        {
+            "key": "field_6169dcc5687bc",
+            "label": "JSON Schema",
+            "name": "single_schema",
+            "type": "textarea",
+            "instructions": "Include any schema here that is only relevant to the content on this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case_studies"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635433958
+}

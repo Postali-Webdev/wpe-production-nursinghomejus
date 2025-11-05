@@ -1,0 +1,218 @@
+/**
+ * Template Front Page Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+.page-template-front-page {
+    header {
+        background: $white;
+    }
+    #front-page {
+        #home-hero {
+            height: 600px;
+            background-position: center top 120px;
+            background-repeat: no-repeat;
+            position: relative;
+            @media screen and (max-width: $screen-xl) {
+                background-position: center top 85px;
+            }
+            @media screen and (max-width: $screen-md) {
+                padding-top: 340px;
+                background-size: 150%;
+            }
+            @media screen and (max-width: $screen-sm) {
+                padding-top: 395px;
+            }
+            @media screen and (max-width: $screen-xs) {
+                padding-top: 340px;
+                background-position: center top 120px;
+            }
+            @media screen and (max-width: 612px) {
+                padding-top: 345px;
+            }
+            @media screen and (max-width: $screen-xxs) {
+                background-size: 191%;
+            }
+            @media screen and (max-width: 433px) {
+                padding-top: 385px;
+            }
+            @media screen and (max-width: 380px) {
+                padding-top: 395px;
+            }
+            @media screen and (max-width: 365px) {
+                padding-top: 435px;
+            }
+            h1 {
+                @media screen and (min-width: 993px) and (max-width: $screen-lg) {
+                    font-size: 40px;
+                }
+            }
+            .small-cta-text {
+                margin-right: 15px;
+                max-width: 200px;
+            }
+            .container.full {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @media screen and (max-width:$screen-xl) {
+                    padding: 0 !important;
+                }
+                .columns {
+                    .column-50 {
+                        @media screen and (max-width: $screen-md) {
+                            width: 100%;
+                        }
+                    }
+                }
+                .dog-ear-container {
+                    .columns {
+                        margin-top: 50px;
+                        @media screen and (max-width:$screen-xl) {
+                            flex-direction: column;
+                        }
+                        div:first-of-type {
+                            @media screen and (max-width:$screen-xl) {
+                                margin-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .page-section-nav {
+            margin-bottom: 95px;
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: $screen-xs) {
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+            .current-section, .next-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                p, a {
+                    font-size: 13px;
+                    margin: 0;
+                }
+                p:first-of-type {
+                    font-family: $libre-baskerville;
+                    font-style: italic;
+                    font-weight: $regular;
+                }
+                p:nth-of-type(2) {
+                    background: $white;
+                    border-left: solid 3px $yellow;
+                    text-align: center;
+                    padding: 3px 15px;
+                    font-family: $outfit;
+                    font-weight: $regular;
+                    @media screen and (max-width: $screen-sm) {
+                        width: 200px;
+                        text-align: left;
+                    }
+                }
+                a {
+                    font-family: $outfit;
+                    font-weight: $regular;
+                    color: $blk;
+                    position: relative;
+                    &:after {
+                        content: url('/wp-content/uploads/2022/06/on-page-dropdown-arrow.svg');
+                        width: 8px;
+                        height: 5px;
+                        position: absolute;
+                        right: -14px;
+                        top: 0px;
+                    }
+                }
+            }
+            .next-section {
+                position: relative;
+                left: -14px;
+                @media screen and (max-width: $screen-xs) {
+                    left: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+        ul.inner-section-nav {
+            list-style-type: none;
+            li {
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px $lt-blue;
+                position: relative;
+                a {
+                    padding-right: 35px;
+                }
+                &:after {
+                    content: "";
+                    background-image: url("/wp-content/uploads/2022/06/on-page-dropdown-arrow.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    position: absolute;
+                    right: 0;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+        @media screen and (max-width: $screen-xs) {
+            .spacer-80 {
+                height: 40px;
+            }
+        }
+        #panel-1 {
+            .columns{
+                div:nth-of-type(2) {
+                    @media screen and (max-width: $screen-sm) {
+                        flex-direction: column;
+                    }
+                }
+            }
+            .dog-ear-container.img {
+                height: 450px;
+                width: 450px;
+                margin-bottom: 50px;
+                background: $lt-blue;
+                @media screen and (max-width: $screen-lg) {
+                    width: 100%;
+                    height: auto;
+                }
+                @media screen and (max-width: $screen-sm) {
+                    margin-top: 50px;
+                    height: 400px;
+                    width: 400px;
+                }
+                @media screen and (max-width: $screen-xs) {
+                    width: 100%;
+                    height: auto;
+    
+                }
+            }
+        }
+        #panel-2 {
+            padding-bottom: 0;
+        }
+        #panel-3 {
+            .dog-ear-container {
+                padding: 8% 14%;
+            }
+        }
+        #panel-4 {
+            padding-bottom: 0;
+        }
+        #panel-6 {
+            padding-bottom: 0;
+        }
+        #panel-7 {
+            padding-bottom: 0;
+        }
+    }
+}

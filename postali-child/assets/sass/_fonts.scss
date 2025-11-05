@@ -1,0 +1,185 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+h1, h2, h3, h4, h5, h6, .sub-title {
+	font-family: $outfit;
+}
+
+p, li {
+	font-family: $open-sans;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 10px 0;
+}
+
+ul, ol {
+    li {
+        margin: 10px 0;
+        list-style-position: inside;
+    }
+}
+
+h1, h2, p, li {
+	color: $dk-blue;
+}
+
+h1, h2 {
+	font-size: 45px;
+	line-height: 45px;
+	text-transform: initial;
+	margin: 10px 0;
+    @media screen and (max-width: $screen-xs) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+h3 {
+    font-size: 31px;
+    color: $maroon;
+    font-family: $outfit;
+    scroll-margin-top: 175px;
+	@media screen and (max-width: $screen-sm) {
+		scroll-margin-top: 100px;
+	}
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 20px 0 0;
+    text-transform: uppercase;
+    letter-spacing: .85px;
+    color: $dk-blue;
+}
+
+.sub-title {
+	font-size: 19px;
+    font-weight: $bold;
+    margin: 10px 0;
+    &.uppercase {
+        text-transform: uppercase;
+    }
+    @media screen and (max-width: $screen-xs) {
+        font-size: 17px;
+    }
+}
+
+.small-cta-text {
+	font-family: $outfit;
+	font-weight: $bold;
+	width: 215px;
+    margin: 0;
+    @media screen and (max-width: $screen-sm) {
+        width: auto;
+        margin: 15px 0;
+    }
+}
+
+a {
+    text-decoration:none;
+    -webkit-transition:$trans;
+    transition:$trans;
+    color: $dk-blue;
+    &:hover {
+        text-decoration:underline;
+        color: unset;
+    }
+    &.arrow {
+        position: relative;
+        &:after {
+            content: url("/wp-content/uploads/2022/06/secondary-nav-arrow-icon.svg");
+            position: absolute;
+            top: 3px;
+            right: -23px;
+            height: inherit;
+            width: 15px;
+            filter: invert(94%) sepia(16%) saturate(3271%) hue-rotate(324deg) brightness(108%) contrast(98%);
+        }
+    }
+}
+
+@keyframes highlight {
+    from {background-position: 0% 0;}
+    to {background-position: -100% 0;}
+}
+
+p > a, .highlight > a, li:not(.menu-item, .ignore-highlight) > a {
+    font-family: $open-sans;
+	font-size: 16px;
+	line-height: 26px;
+    padding: 3px 6px;
+    width: max-content;
+    background-size: 200% auto; 
+    background-color: $transparent;
+    background-image: linear-gradient(to right,$transparent 50%,$yellow 50%);
+    background-position: 0% 0;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @media screen and (max-width: $screen-xs) {
+        text-decoration: underline;
+        padding: 0;
+    }
+    &.active {
+        animation-name: highlight;
+        // display: inline-block;
+        // inline-size: auto;
+    }
+}
+
+.btn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 300px;
+    height: 60px;
+    padding: 0 15px;
+    text-decoration:none;
+    transition:$trans;
+    font-family: $outfit;
+    font-size: 15px;
+    letter-spacing: 1.6px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: underline;
+    }
+    &.yellow {
+        background-color: $yellow;
+        color: $blk;
+    }
+    &.maroon {
+        background-color: $maroon;
+        color: $white;
+    }
+    &.round {
+        border-radius: 27px;
+        height: 50px;
+    }
+    &.inactive {
+        pointer-events: none;
+    }
+}
+.thin-text {
+    color: $maroon;
+    font-family: $libre-baskerville;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: $regular;
+}
+.gchoice {
+    input:focus-visible {
+        & ~ label {
+            text-decoration: underline;
+            border: solid 1px $dk-blue;
+        }
+    }
+}

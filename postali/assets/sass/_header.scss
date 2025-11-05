@@ -1,0 +1,174 @@
+/**
+ * Header Styles
+ *
+ * @package Postali Parent
+ * @author Postali LLC
+ */
+
+/** Header and footer */
+header {
+	@media screen and (max-width: $screen-md) {
+		width:100%;
+		background-color:$white;
+	}
+	#head-top {
+		padding:10px 0;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 140%;
+		
+		@media screen and (max-width: $screen-md) {
+			font-size:16px;
+		}
+	}
+
+	#head-middle {
+		display: grid;
+		grid-template-columns:1fr 1fr;
+		align-items:center;
+		width:100%;
+		padding-top:30px;
+		padding-bottom:30px;
+		@media screen and (max-width: $screen-md) {
+			grid-template-columns:1fr 1fr 60px;
+			grid-column-gap:30px;
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+
+		@media screen and (max-width: $screen-sm) {
+			grid-template-columns:1fr 1fr;
+		}
+
+		#head-middle-left {
+			justify-self:start;
+			max-width:320px;
+			a {
+				display: block;
+				padding:10px;
+			}
+		}
+		#head-middle-right {
+			justify-self:end;
+			text-align: right;
+
+			@media screen and (max-width: $screen-sm) {
+				display: none;
+			}
+
+			p {
+				display: block;
+				font-family: sans-serif;
+				font-weight: 700;
+				color:$black;
+				text-transform: uppercase;
+				font-size:18px;
+				line-height: 22px;
+				margin-bottom: 0;
+				@media screen and (max-width: $screen-sm) {
+					display:inline-block;
+					margin-right:10px;
+				}
+			}
+
+			span {
+				display: block;
+				font-family: sans-serif;
+				color:$black;
+				font-size:24px;
+				line-height: 26px;
+				@media screen and (max-width: $screen-sm) {
+					display:inline-block;
+				}
+			}
+			.head-menu.desktop {
+                ul {
+                    list-style-type:none;
+                    margin:0;
+                    padding:0;
+        
+                    li {
+                        display: inline-block;
+                        position: relative;
+                        a {
+                            display: inline-block;
+                            color:$black;
+                            // font-family: sans-serif;
+                            font-size:18px;
+                            line-height: 22px;
+                            font-weight: 700;
+                            text-decoration:none;
+                            padding:20px 25px;
+                            transition:0.3s linear;
+        
+                            &:hover {
+                                // color:$color-pri;
+                            }
+                        }
+                        ul.sub-menu {
+                            @extend .smooth !optional;
+                            display: none;
+                            position: absolute;
+                            min-width: 100%;
+                            background-color:rgba(255,255,255,0.95);
+                            padding: 30px 20px 30px;
+                            text-align: center;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            top: 40px;
+                            li {
+                              display: block;
+                              a {
+                                padding:10px 15px;
+                                top:0;
+                                position: relative;
+                                line-height: 150%;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                // font-family: $barlow!important;
+                                font-weight: 500;
+                                &:hover, &:active {
+                                  border-bottom: 0;
+                                  color: $black;
+                                }
+                                &:hover:after {
+              
+                                }
+                              }
+                            }
+                          }
+                        &:hover {
+                            // color:$color-pri;
+                            ul.sub-menu {
+                                display: block !important;
+                                /*padding: 0;*/
+                            }
+                        }
+                    }		
+                }
+                @media screen and (max-width: $screen-md) {
+                    display: none;
+                }
+            }
+		}
+	}
+
+	#head-bottom {
+		background-color:$black;
+
+		#head-bottom-container {
+			display: grid;
+			grid-template-columns:1fr 140px;
+
+		}
+		
+		@media screen and (max-width: $screen-md) {
+			display: none;
+		}
+	}
+
+	
+}
