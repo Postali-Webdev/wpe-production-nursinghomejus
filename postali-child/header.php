@@ -67,13 +67,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="phone-container">
 						<a class="btn yellow" href="tel:<?php esc_html_e($clean_phone); ?>"><?php the_field('default_phone', 'options'); ?></a>
 					</div> 
+                    <nav role="navigation">
 						<?php
 							$args = array(
 								'container' => false,
 								'theme_location' => 'header-nav'
 							);
 							wp_nav_menu( $args );
-						?>			
+						?>	
+                    </nav>		
 					<div id="header-top_mobile">
 						<div id="menu-icon" class="toggle-nav">
 							<span class="line line-1"></span>
