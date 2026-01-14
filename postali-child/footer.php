@@ -48,10 +48,6 @@ $pre_footer_data = get_field('pre_footer', 'options');
         </div>
     </div>
 </footer>
-<!-- callrail -->
-<script type="text/javascript" src="//cdn.callrail.com/companies/435791415/c794abdc3d1701f48e13/12/swap.js"></script> 
-<!-- /callrail -->
-
 
 <!--  Clickcease.com tracking-->
 <script type='text/javascript'>var script = document.createElement('script');
